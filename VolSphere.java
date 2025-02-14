@@ -34,17 +34,21 @@ public final class VolSphere {
         final Scanner scanner = new Scanner(System.in);
         final String radString = scanner.nextLine();
 
+        //Convert string into a double
         final double radDouble = Double.parseDouble(radString);
 
+        //If the radius is negative tell the user
         if (radDouble < 0) {
             System.out.println("The radius cannot be negative.");
         } else {
 
-        final double volume = (4f / 3f) * Math.PI * Math.pow(radDouble, 3f);
+            //Calculate the volume
+            final double volume = (4f / 3f) * Math.PI * Math.pow(radDouble, 3f);
 
         //Display Volume
         System.out.print("The volume of a sphere with the radius, ");
         System.out.print(radString + "cm, is ");
+        //Round to 3 decimal places
         System.out.format("%.3f", volume);
         System.out.println("cm^3.");
         }
